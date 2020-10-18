@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:activity="com.starway.starrobot.fragment.AnswerFragment">
+
+  <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="270dp"
+    android:layout_marginTop="50dp"
+    android:layout_marginRight="270dp"
+    android:paddingBottom="50dp">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical">
+
+      <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:paddingBottom="20dp"
+        android:textSize="38sp" />
+
+      <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="600dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone" />
+    </LinearLayout>
+
+  </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  android:background="@mipmap/bg_black"
+  tools:activity="com.starway.starrobot.activity.backstage.WiFiManageActivity">
+
+  <include layout="@layout/include_backstage_toolbar"/>
+
+  <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:paddingLeft="200dp"
+    android:paddingRight="200dp">
+
+
+    <ListView
+      android:visibility="invisible"
+      android:id="@+id/WiFi_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:animateLayoutChanges="true"
+      android:divider="@null"
+      android:scrollbars="none"
+      android:fastScrollEnabled="false"
+      android:layout_marginLeft="10dp"/>
+
+    <LinearLayout
+      android:visibility="visible"
+      android:id="@+id/loading"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:paddingBottom="50dp"
+      android:gravity="center"
+      android:animateLayoutChanges="true">
+
+      <ProgressBar
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+    </LinearLayout>
+
+  </FrameLayout>
+
+  <TextView
+    android:id="@+id/wifi_state"
+    android:layout_gravity="center"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="30dp"
+    android:layout_marginBottom="30dp"
+    android:alpha="0.5"
+    android:textSize="18sp"/>
+
+</LinearLayout>

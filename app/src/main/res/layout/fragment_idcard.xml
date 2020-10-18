@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+              android:gravity="center"
+             tools:activity="com.starway.starrobot.fragment.AnswerFragment">
+
+        <LinearLayout
+            android:layout_width="800dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="60dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:paddingBottom="20dp"
+                android:text="列宁"
+                android:textColor="#3ad7fa"
+                android:textSize="55sp"/>
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:paddingBottom="20dp"
+                android:text="安徽省芜湖市"
+                android:textColor="#9c9292"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|top"
+                android:paddingBottom="20dp"
+                android:text="1998年10月01日"
+                android:textColor="#d2854d"
+                android:textSize="30sp"/>
+
+
+            <ImageView
+                android:id="@+id/print"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/bg_ripple_oval_blue"
+                android:padding="33dp"
+                android:src="@mipmap/ic_printer"/>
+
+        </LinearLayout>
+
+</LinearLayout>

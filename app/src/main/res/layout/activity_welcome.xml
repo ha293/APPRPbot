@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:screenOrientation="landscape"
+
+    tools:activity="com.starway.starrobot.activity.WelcomeActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp"
+        android:background="@mipmap/bg_2">
+
+        <com.starway.starrobot.view.MyVideoView
+            android:visibility="visible"
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ImageView
+            android:layout_width="272dp"
+            android:layout_height="85dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:alpha="0.8"
+            android:src="@mipmap/xunfei" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/touchPanel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:background="@drawable/bg_ripple_transport">
+
+        <RelativeLayout
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            >
+
+            <ImageView
+                android:id="@+id/logo"
+              android:transitionName="logo"
+                android:layout_width="152dp"
+                android:layout_height="132dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="3dp"
+                android:padding="0dp"
+                android:src="@mipmap/app_logo2"
+                />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/textView2"
+                android:layout_centerHorizontal="true"
+                android:text="@string/welcome_tip1"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:text="@string/welcome_tip2"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/mic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:elevation="8dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70dp"
+            android:padding="20dp"
+            android:src="@drawable/ic_mic_white"
+            android:background="@drawable/bg_ripple_oval_blue2"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/pw1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/pw2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/pw3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/pw4"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:background="@null"/>
+
+        <!--视频控制 双击暂停、上下滑动音量、左右滑动快进-->
+      <com.starway.starrobot.view.ScrollingView
+        android:id="@+id/video_control"
+        android:layout_width="1100dp"
+        android:layout_height="700dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:background="@null" />
+      <TextView
+        android:id="@+id/mytime"
+        android:gravity="center"
+        android:textColor="#008FEE"
+        android:textSize="24sp"
+        android:minLines="1"
+        android:maxLines="2"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_toLeftOf="@+id/pw2"
+        />
+
+        <!--调节全局音量-->
+        <com.starway.starrobot.view.ScrollingView
+            android:id="@+id/volume"
+            android:layout_width="900dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

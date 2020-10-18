@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@mipmap/bg_black"
+ >
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="180dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:clipToPadding="false"
+
+    android:gravity="center">
+
+    <LinearLayout
+      android:id="@+id/btnjieshap"
+      android:layout_width="@dimen/menuBlockSize"
+      android:layout_height="@dimen/menuBlockSize"
+      android:layout_marginLeft="@dimen/menuBlockMargin"
+      android:layout_marginRight="@dimen/menuBlockMargin"
+      android:background="@drawable/bg_ripple_green"
+      android:clickable="true"
+      android:orientation="vertical"
+      android:elevation="8dp"
+      android:padding="12dp">
+
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="13dp"
+        android:src="@mipmap/xuexiao"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/menu_college"
+        android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/btnbook"
+      android:layout_width="@dimen/menuBlockSize"
+      android:layout_height="@dimen/menuBlockSize"
+      android:layout_marginLeft="@dimen/menuBlockMargin"
+      android:layout_marginRight="@dimen/menuBlockMargin"
+      android:background="@drawable/bg_ripple_red"
+      android:clickable="true"
+      android:orientation="vertical"
+      android:elevation="8dp"
+      android:padding="12dp">
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="13dp"
+        android:src="@mipmap/shuji"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/menu_book"
+        android:textSize="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/btnGudie"
+      android:layout_width="@dimen/menuBlockSize"
+      android:layout_height="@dimen/menuBlockSize"
+      android:layout_marginLeft="@dimen/menuBlockMargin"
+      android:layout_marginRight="@dimen/menuBlockMargin"
+      android:background="@drawable/bg_ripple_cyan"
+      android:clickable="true"
+      android:orientation="vertical"
+      android:elevation="8dp"
+      android:padding="12dp">
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="13dp"
+        android:src="@mipmap/dinwei"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/menu_space"
+        android:textSize="20sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/btnQA"
+      android:layout_width="@dimen/menuBlockSize"
+      android:layout_height="@dimen/menuBlockSize"
+      android:layout_marginLeft="@dimen/menuBlockMargin"
+      android:layout_marginRight="@dimen/menuBlockMargin"
+      android:background="@drawable/bg_ripple_blue"
+      android:clickable="true"
+      android:orientation="vertical"
+      android:elevation="8dp"
+      android:padding="12dp">
+      <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="13dp"
+        android:src="@mipmap/liaotian"/>
+
+      <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/menu_qa"
+        android:textSize="20sp"/>
+    </LinearLayout>
+  </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+android:background="@mipmap/bg_black"
+  tools:activity="com.starway.starrobot.backstage.BackstageActivity">
+
+
+  <include layout="@layout/include_backstage_toolbar"/>
+
+  <LinearLayout
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_marginTop="45dp"
+    android:layout_weight="1"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="257dp"
+      android:clipToPadding="false"
+      android:gravity="center"
+      android:paddingTop="10dp"
+      android:paddingBottom="20dp">
+
+      <LinearLayout
+        android:id="@+id/openWiFi"
+        android:layout_width="@dimen/menuBlockSize"
+        android:layout_height="@dimen/menuBlockSize"
+        android:layout_marginLeft="@dimen/menuBlockMargin"
+        android:layout_marginRight="@dimen/menuBlockMargin"
+        android:background="@drawable/bg_ripple_blue"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:padding="13dp"
+          android:src="@mipmap/ic_wifi" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/setting_wifi"
+          android:textSize="20sp" />
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/open_setting"
+        android:layout_width="@dimen/menuBlockSize"
+        android:layout_height="@dimen/menuBlockSize"
+        android:layout_marginLeft="@dimen/menuBlockMargin"
+        android:layout_marginRight="@dimen/menuBlockMargin"
+        android:background="@drawable/bg_ripple_green"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:padding="13dp"
+          android:src="@mipmap/ic_settings" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/setting_sys_setting"
+          android:textSize="20sp" />
+
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/open_hardware"
+        android:layout_width="@dimen/menuBlockSize"
+        android:layout_height="@dimen/menuBlockSize"
+        android:layout_marginLeft="@dimen/menuBlockMargin"
+        android:layout_marginRight="@dimen/menuBlockMargin"
+        android:background="@drawable/bg_ripple_brown"
+        android:clickable="true"
+        android:elevation="5dp"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          android:padding="13dp"
+          android:src="@mipmap/ic_support" />
+
+        <TextView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+          android:text="@string/setting_support"
+          android:textSize="20sp" />
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="60dp"
+      android:clipToPadding="false"
+      android:gravity="center"
+      android:paddingTop="10dp"
+      android:paddingBottom="20dp">
+
+
+    </LinearLayout>
+  </LinearLayout>
+  <TextView
+    android:id="@+id/ftp_info"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginBottom="30dp"
+    android:text="@string/setting_tip_ftp"
+    android:textColor="#8cffffff" />
+
+</LinearLayout>

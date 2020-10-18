@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="txt/html; charset=utf-8"/>
+  <link href="/template/45/jsjx/_files/img/logo.ico" rel="shortcut icon">
+  <link rel="stylesheet" href="/template/45/jsjx/_files/css/reset.css">
+  <link rel="stylesheet" href="/template/45/jsjx/_files/css/index.css">
+  <link rel="stylesheet" href="/template/45/jsjx/_files/css/inc_header.css">
+  <link rel="stylesheet" href="/template/45/jsjx/_files/css/inc_footer.css">
+  <!--[if lt IE 9]>
+  <script src="/template/45/jsjx/_files/js/respond.min.js"></script>
+  <![endif]-->
+  <title>计算机与软件工程学院-首页</title>
+</head>
+<script src="/template/45/jsjx/_files/jquery.js"></script>
+<script type="text/javascript">
+    function togglenotice() {
+        $('.noticepic').toggle();
+    }
+
+    $(function () {
+        $.each('.dynamic .div-right li', function (i) {
+            var len2 = 0;
+            var b1 = $('.dynamic .div-right li').eq(i).find('p').text();
+            for (var j = 0; j < b1.length; j++) {
+                var b = b1.charAt(j);
+                if (b.match(/[^\x00-\xff]/ig) != null) {
+                    len2 += 2;
+                }
+                else {
+                    len2 += 1;
+                }
+                if (len2 >= 80) {
+                    var text2 = $('.dynamic .div-right li').eq(i).find('p').text().substring(0, j) + '...';
+                    $('.dynamic .div-right li').eq(i).find('p').text(text2);
+                    break;
+                }
+            }
+        })
+    });
+
+    //help
+    function showscondcode() {
+        $('.scond-code').show();
+    }
+
+    function hidescondcode() {
+        $('.scond-code').hide();
+    }
+
+    function totop() {
+        $('html,body').animate({scrollTop: '0px'});
+    }
+
+
+    $(function () {
+//        判断滑轮高度
+        $(window).scroll(function () {
+            var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (screen.width > 1440) {
+                if (1680 >= scrollTop && scrollTop >= 450) {
+                    $('.totop').show();
+                    $('.help').css('top', (scrollTop + 360) + 'px');
+                }
+                else if (scrollTop > 1680) {
+                    $('.totop').show();
+                    $('.help').css('top', '1000px');
+                }
+                else {
+                    $('.totop').show();
+                    $('.help').css('top', '597px');
+                }
+            } else {
+                if (864 >= scrollTop && scrollTop >= 217) {
+                    $('.totop').show();
+                    $('.help').css('top', (scrollTop + 380) + 'px');
+                } else if (scrollTop > 864) {
+                    $('.totop').show();
+                    $('.help').css('top', '1260px');
+                } else {
+                    $('.totop').show();
+                    $('.help').css('top', '597px');
+                }
+            }
+        });
+    })
+    //根据浏览器自动判断轮滑高度，大屏上部不对齐
+    // $(function () {
+    //     //        判断滑轮高度
+    //     $(window).scroll(function () {
+    //         var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+    //         var marwin=$(document).height() - $(window).height();
+    //         var marginBottom = $(document).height() - 142-275;
+    //         var winmarginBottom = $(window).height() - 142-275;
+    //
+    //         if (screen.width > 1440) {
+    //             console.log(winmarginBottom);
+    //             if (marwin >scrollTop && scrollTop >= 597-winmarginBottom) {
+    //                 $('.totop').show();
+    //                 $('.help').css('top', (scrollTop+winmarginBottom) + 'px');
+    //             } else if (scrollTop >= marwin) {
+    //                 $('.totop').show();
+    //                 $('.help').css('top', marginBottom + 'px');
+    //             } else{
+    //                 $('.totop').show();
+    //                 $('.help').css('top', '597px');
+    //             }
+    //
+    //         } else {
+    //             if (874 >= scrollTop && scrollTop >= 217) {
+    //                 $('.totop').show();
+    //                 $('.help').css('top', (scrollTop + 380) + 'px');
+    //             } else if (scrollTop > 874) {
+    //                 $('.totop').show();
+    //                 $('.help').css('top', '1254px');
+    //             } else {
+    //                 $('.totop').show();
+    //                 $('.help').css('top', '597px');
+    //             }
+    //         }
+    //     });
+    // })
+
+    //     $(function () {
+    //         var winmarginBottom = $(window).height() - 134-275;
+    //         console.log(winmarginBottom);
+    // //        判断滑轮高度590+134+275
+    //         $(window).scroll(function () {
+    //             var scrollTop = document.documentElement.scrollTop||document.body.scrollTop;
+    //             if($(window).height() >(590+134+275)){
+    //                 $('.help').show()
+    //             }
+    //             else{
+    //                 if (scrollTop >= 590-winmarginBottom) {
+    //                     $('.help').show();
+    //                     //  $(".help").fadeIn(2000);
+    //                 }
+    //                 if(scrollTop < 590-winmarginBottom){
+    //                     $(".help").fadeOut(500);
+    //                 }
+    //                 else {
+    //                     $('.help').css('bottom', '134px');
+    //                 }
+    //             }
+    //         });
+    //     })
+</script>
+<body>
+<div class="help">
+  <a href="http://cse.aiit.edu.cn:80/guestbook.do" target="_blank">
+    <div>
+      <div class="talk"></div>
+      访客留言
+    </div>
+  </a>
+
+  <a href="https://weibo.com/ahpumec1935" target="_blank">
+    <div>
+      <div class="weibopic"></div>
+      官方微博
+    </div>
+  </a>
+
+  <div style="border-bottom: 1px solid #c2c2c2;" onmouseover="showscondcode();" onmouseout="hidescondcode();">
+    <div class="weixinpic"></div>
+    官方微信
+  </div>
+  <div class="totop" onclick="totop();">
+    <div class="toppic"></div>
+  </div>
+  <div class="scond-code">
+    <img src="/template/45/jsjx/_files/img/scond-code.png"/>
+  </div>
+</div>
+<script src="/template/45/jsjx/_files/jquery.js"></script>
+<script src="/template/45/jsjx/_files/js/swiper.js"></script>
+<link rel="stylesheet" href="/template/45/jsjx/_files/css/swiper.css">
+<script type="text/javascript" src="/template/45/jsjx/_files/ckplayer/ckplayer.js"></script>
+<script>
+    function showlist(e) {
+        $(e).find('.navigation-list').show();
+    }
+    function hidelist(e) {
+        $(e).find('.navigation-list').hide();
+    }
+    function removeTrim(e){
+        $(e).val($.trim(e.value));
+    }
+    $(function(){
+        if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder
+            $('[placeholder]').focus(function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                    input.removeClass('placeholder');
+                }
+            }).blur(function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.addClass('placeholder');
+                    input.val(input.attr('placeholder'));
+                }
+            }).blur();
+        }
+    })
+    function placeholderSupport() {
+        return 'placeholder' in document.createElement('input');
+    }
+    function removeSe(){
+        var pattern = new RegExp("[`~!@#$`^&*()=|{}':;'`,\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？]")
+        if(pattern.test($("#qv").val())){
+            showmaskall("不要输入特殊字符！！！");
+            return;
+        }else{
+            sessionStorage.setItem("pag","");
+            if($("#qv").val()){
+                $("#qs").val($("#qv").val());
+            }
+
+            $("#searcherForm").submit();
+        }
+    }
+</script>
+<div class="top clearfix">
+  <div class="header-top">
+    <div class="info-phone">
+      <span>校长办公室：0553-8795000/3913500</span> <span>招生咨询：0553-3913567</span> <span style="margin-right: 0">人才招聘：0553-8795011</span>
+    </div>
+  </div>
+</div>
+<div class="header-out clearfix">
+  <div class="header">
+    <a href="http://cse.aiit.edu.cn:80">
+      <img class="log" src="/template/45/jsjx/_files/img/school-log.png">
+      <h1><img src="/template/45/jsjx/_files/img/department-name.png"></h1>
+    </a>
+    <div class="user-info">
+      <div class="inputdiv">
+        <form id="searcherForm" action="http://cse.aiit.edu.cn:80/search" method="get">
+          <img src="/template/45/jsjx/_files/img/select.png">
+          <input type="hidden" id="qs" name="qs">
+          <input id="qv"  name="q"  autocomplete="off" value="" onkeyup="removeTrim(this);" placeholder="请输入您要搜索的内容">
+          <button class="btn-select" onclick="removeSe();"  type="button">搜索</button>
+
+        </form>
+      </div>
+      <button class="to-home" onclick="window.open('http://www.aiit.edu.cn')"  type="button">
+        <img src="/template/45/jsjx/_files/img/home.png"><img style="padding: 0 5px" src="/template/45/jsjx/_files/img/line.png">学院官网</button>
+    </div>
+  </div>
+</div>
+<div class="sidebar clearfix">
+
+  <ul class="navigation">
+    <li>
+      <a class="main" href="http://cse.aiit.edu.cn:80/">首页</a>
+    </li>
+    <!--
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1510">学院介绍</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1524">师资队伍</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1541">教学科研</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1557">教学管理</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1562">招生就业</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1571">创新创业</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1584">学生工作</a>
+             </li>
+             <li>
+                 <a href="http://cse.aiit.edu.cn:80/node/1591">党建工作</a>
+             </li>
+     -->
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >学院介绍</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="学院简介" >
+          <a href="http://cse.aiit.edu.cn:80/node/1513">学院简介</a>
+        </li>
+        <li title="学院领导" >
+          <a href="http://cse.aiit.edu.cn:80/node/1516">学院领导</a>
+        </li>
+        <li title="专业设置" >
+          <a href="http://cse.aiit.edu.cn:80/node/1518">专业设置</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >师资队伍</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="教授风采" >
+          <a href="http://cse.aiit.edu.cn:80/node/1527">教授风采</a>
+        </li>
+        <li title="骨干教师风采" >
+          <a href="http://cse.aiit.edu.cn:80/node/1534">骨干教师风采</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >教学科研</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="质量工程" >
+          <a href="http://cse.aiit.edu.cn:80/node/1545">质量工程</a>
+        </li>
+        <li title="课程建设" >
+          <a href="http://cse.aiit.edu.cn:80/node/1548">课程建设</a>
+        </li>
+        <li title="实践教学" >
+          <a href="http://cse.aiit.edu.cn:80/node/1550">实践教学</a>
+        </li>
+        <li title="科研项目" >
+          <a href="http://cse.aiit.edu.cn:80/node/1552">科研项目</a>
+        </li>
+        <li title="专利成果" >
+          <a href="http://cse.aiit.edu.cn:80/node/1553">专利成果</a>
+        </li>
+        <li title="学术交流" >
+          <a href="http://cse.aiit.edu.cn:80/node/1555">学术交流</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >教学管理</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="规章制度" >
+          <a href="http://cse.aiit.edu.cn:80/node/1558">规章制度</a>
+        </li>
+        <li title="教学工作" >
+          <a href="http://cse.aiit.edu.cn:80/node/1560">教学工作</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >招生就业</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="招生工作" >
+          <a href="http://cse.aiit.edu.cn:80/node/1564">招生工作</a>
+        </li>
+        <li title="实习基地" >
+          <a href="http://cse.aiit.edu.cn:80/node/1566">实习基地</a>
+        </li>
+        <li title="就业指导" >
+          <a href="http://cse.aiit.edu.cn:80/node/1568">就业指导</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >创新创业</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="学科竞赛" >
+          <a href="http://cse.aiit.edu.cn:80/node/1573">学科竞赛</a>
+        </li>
+        <li title="校友之窗" >
+          <a href="http://cse.aiit.edu.cn:80/node/1575">校友之窗</a>
+        </li>
+        <li title="创业典型" >
+          <a href="http://cse.aiit.edu.cn:80/node/1577">创业典型</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >学生工作</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="学生社团" >
+          <a href="http://cse.aiit.edu.cn:80/node/1585">学生社团</a>
+        </li>
+        <li title="规章制度" >
+          <a href="http://cse.aiit.edu.cn:80/node/1586">规章制度</a>
+        </li>
+        <li title="办事流程" >
+          <a href="http://cse.aiit.edu.cn:80/node/1588">办事流程</a>
+        </li>
+        <li title="学生风采" >
+          <a href="http://cse.aiit.edu.cn:80/node/1589">学生风采</a>
+        </li>
+        <li title="学生活动" >
+          <a href="http://cse.aiit.edu.cn:80/node/1590">学生活动</a>
+        </li>
+
+      </ul>
+    </li>
+    <li onmouseover="showlist(this)" onmouseout="hidelist(this)"><a >党建工作</a>
+      <ul  class="navigation-list" style="display: none">
+        <li title="组织结构" >
+          <a href="http://cse.aiit.edu.cn:80/node/1592">组织结构</a>
+        </li>
+        <li title="规章制度" >
+          <a href="http://cse.aiit.edu.cn:80/node/1593">规章制度</a>
+        </li>
+        <li title="党员活动" >
+          <a href="http://cse.aiit.edu.cn:80/node/1594">党员活动</a>
+        </li>
+
+      </ul>
+    </li>
+  </ul>
+</div>
+<script type="text/javascript">
+    function closemaskall() {
+        $('.mask-all').hide();
+        $('.popup').hide();
+    }
+    function showmaskall(data) {
+        $('.mask-all').show();
+        $('.popup').show();
+        $('.popup .mindle').text(data);
+    }
+</script>
+<div class="mask-all">
+</div>
+<div class="popup">
+  <div>
+    <span class="title">提示信息</span><span class="close" onclick="closemaskall()"></span>
+  </div>
+  <div class="mindle">
+    您的留言信息已经提交成功
+  </div>
+  <div>
+    <input class="btn" type="button" value="确定" onclick="closemaskall()">
+  </div>
+</div>
+<div class="mian-pic">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"
+           style="width:100%;height:100%;background-size: 100%;" onmouseenter="togglenotice()"
+           onmouseleave="togglenotice()">
+        <a href="http://cse.aiit.edu.cn:80/info/129589"><img src="/uploads/45/image/public/201905/20190505135920_3ija4bafxr.jpg"></a>
+        <div class="noticepic">
+          <a href="http://cse.aiit.edu.cn:80/info/129589">
+            <div class="notic-text">
+              <div class="title ell" title="计算机与软件工程学院">计算机与软件工程学院</div>
+              <div class="text" title="?">?</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide"
+           style="width:100%;height:100%;background-size: 100%;" onmouseenter="togglenotice()"
+           onmouseleave="togglenotice()">
+        <a href="http://cse.aiit.edu.cn:80/info/129588"><img src="/uploads/45/image/public/201905/20190505135809_m97x43io4w.jpg"></a>
+        <div class="noticepic">
+          <a href="http://cse.aiit.edu.cn:80/info/129588">
+            <div class="notic-text">
+              <div class="title ell" title="计算机与软件工程学院">计算机与软件工程学院</div>
+              <div class="text" title="?">?</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide"
+           style="width:100%;height:100%;background-size: 100%;" onmouseenter="togglenotice()"
+           onmouseleave="togglenotice()">
+        <a href="http://cse.aiit.edu.cn:80/info/125588"><img src="/uploads/45/image/public/201905/20190505082859_fhweih8a1k.png"></a>
+        <div class="noticepic">
+          <a href="http://cse.aiit.edu.cn:80/info/125588">
+            <div class="notic-text">
+              <div class="title ell" title="计算机与软件工程学院">计算机与软件工程学院</div>
+              <div class="text" title="?">?</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="swiper-slide"
+           style="width:100%;height:100%;background-size: 100%;" onmouseenter="togglenotice()"
+           onmouseleave="togglenotice()">
+        <a href="http://cse.aiit.edu.cn:80/info/125565"><img src="/uploads/45/image/public/201905/20190505083422_p9crr9hba1.png"></a>
+        <div class="noticepic">
+          <a href="http://cse.aiit.edu.cn:80/info/125565">
+            <div class="notic-text">
+              <div class="title ell" title="计算机与软件工程学院">计算机与软件工程学院</div>
+              <div class="text" title="?">?</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="pagination"></div>
+  </div>
+</div>
+<div class="mian-content clearfix">
+  <div class="modular dynamic">
+    <div class="titlediv">
+      <span class="title">学院动态</span><a class="more" href="http://cse.aiit.edu.cn:80/node/1605">更多</a><br/>
+    </div>
+
+    <div class="div-left">
+      <a href="http://cse.aiit.edu.cn:80/info/131731"><img src="/template/45/jsjx/_files/img/dynamic-pic.png"></a>
+      <a class="ell" style="width: 95%" href="http://cse.aiit.edu.cn:80/info/131731" title="计算机与软件工程学院开展16级实习第一批次实习走访工作">计算机与软件工程学院开展16级实习第一批次实习走访工作</a>
+      <p class="ell">????? 为加强我院课程建设和实习管理，深入了解企业对计科专业实习生的各项要求，使我院实习生能够符合企业的用人需求，达到理论基础扎实，实践动手能力强的标准。7月31日至8月2日，学工主管袁卫家，实习就业负责老师杨旭，专业课教师刘晴晴、佘星星等一行赴南京、苏州、南通（如皋）开展2016级实习转走访实地座谈会工作。走访组冒着酷暑三天里走访了企业5家。?（图为实习走访合影）?（图为实习走访合影）在企业中，走访老师与学生亲切交谈。首先咨询学生近期实习状态与收获，核实学生与实习公司签订相关协议情况，详细了解学生现在的经济状况和实际工作中遇到的困难。同时同行的专业教师刘晴晴、佘星星针对学生提出的专业问题做了解答及记录，最后走访组勉励同学们勤奋学习、勤于实践。????? ??（图为深入学生实习办公室交流）?（图为走访走访老师与学生座谈现场）走访小组与企业领导进行会面，杨旭、袁卫家老师简单阐述学生实习收获，表达了对公司的感谢，并介绍了学院教学实践情况及实习学生在校的学习状况，获取了公司对学生实习情况的</p>
+      <!--<button class="see-more" onclick="window.open('http://cse.aiit.edu.cn:80/node/1605')">
+          查看更多
+      </button>-->
+
+    </div>
+
+    <div class="div-right">
+      <ul>
+        <li>
+          <div class="head-time">
+            <span style="font-size: 30px;font-family:'方正仿宋简体';">01</span><br/>
+            <span style="font-size: 12px">2019/08</span>
+          </div>
+          <div class="content">
+            <a class="ell" href="http://cse.aiit.edu.cn:80/info/131690" title="计算机与软件工程学院学生党支部学生党员代表积极参与“垃圾分类?弋起行”环保公益跑活动">计算机与软件工程学院学生党支部学生党员代表积极参与“垃圾分类?弋起行”环保公益跑活动</a>
+            <p>为进一步增强大众的环保意识，提高全社会对生活垃圾分类的认同度和参与度。2019年7月27日芜湖市弋江区区委联合芜湖市生态保护协会在十里江湾银泰城段开展弋江区垃圾分类主题宣传活动启动仪式暨“垃圾分类·弋起行”环保公益跑活动。安徽信息工程学院计算机与软件工程学院学生党支部学生党员代表们参与了此次环保公益跑活动。???????????? （图为志愿者合影）?? ???????? ??????????????????? （图为志愿者合影）虽正值盛夏七月，但志愿者们的满腔热情却丝毫未受影响，他们身着统一服饰，神采盎然齐聚活动现场 。活动之初，志愿者们在宣誓墙上按下手印，签下“请战书”，表达自身对环保意识的赞同与支持。接着，由弋江区委宣传部副部长、文明办主任王婧讲话，提倡呼吁大家将垃圾分类处理常态化，生活化。在芜湖市生态环境保护志愿者协会丁洁宣读《垃圾分类，从我做起》倡议书后，弋江区垃圾分类主题宣传活动启动仪式在铿锵有力、慷慨激昂的口号声中正式拉开帷幕。随着环保公益跑的开始，现场氛围也迅速达到高潮。</p>
+          </div>
+        </li>
+        <li>
+          <div class="head-time">
+            <span style="font-size: 30px;font-family:'方正仿宋简体';">29</span><br/>
+            <span style="font-size: 12px">2019/07</span>
+          </div>
+          <div class="content">
+            <a class="ell" href="http://cse.aiit.edu.cn:80/info/131643" title="“不忘初心，牢记使命”——做一名奋斗有为 担当奉献的志愿者 ——计算机与软件工程学院学生党支部开展“中国好人”报告会">“不忘初心，牢记使命”——做一名奋斗有为 担当奉献的志愿者 ——计算机与软件工程学院学生党支部开展“中国好人”报告会</a>
+            <p>“不忘初心、牢记使命”，为了迎接八一建军节，学习“中国好人”奋斗有为、担当奉献的志愿者精神，安徽信息工程学院计算机与软件工程学院学生党支部邀请了中国好人、安徽省道德模范高述红，于2019年7月28日上午在东一104智慧教室主讲了“不忘初心，牢记使命”的报告会。安徽信息工程学院党建办主任袁龙喜，学生党支部组织委员随小莉、学生党员和入党积极分子代表参与了本次报告会。（图为中国好人高述红同志与师生合影）不忘初心、牢记使命，做一名奋斗有为的志愿者。报告人高述红结合自己的入党历程、创业故事向学员们讲述了一堂振奋人心的奋斗课。在她的创业历程中，累过、痛过、苦过、笑过，流过汗水、淌过泪水，做过很多很多小事情，也敢于突破做一些大事，抓住每一个锻炼自己的机会，做好每一次奋斗的准备。她鼓励同学们在学习生活中，务必学会珍惜，珍惜自己的机会，不停地锻炼自己，掌握新的技能，收获新的知识，是对自己汗水、泪水最大的犒劳。在习总书记的金句中：“奋斗是青春最靓丽的底色”，这句话无疑是高述红同志送给学员们青春的最美祝福。（</p>
+          </div>
+        </li>
+        <li>
+          <div class="head-time">
+            <span style="font-size: 30px;font-family:'方正仿宋简体';">26</span><br/>
+            <span style="font-size: 12px">2019/07</span>
+          </div>
+          <div class="content">
+            <a class="ell" href="http://cse.aiit.edu.cn:80/info/131593" title="牢记革命功臣，传承民族精神 ------迎“八一 ” 慰问94岁高龄老党员、志愿军战士庄燕劳">牢记革命功臣，传承民族精神 ------迎“八一 ” 慰问94岁高龄老党员、志愿军战士庄燕劳</a>
+            <p>??在中国人民解放军建军92周年到来之际，为讴歌人民解放军对伟大祖国和人民做出的贡献，加强爱国主义教育，并进一步弘扬爱国主义精神，计算机与软件工程学院学生党支部党员代表，于7月24日下午举行了迎“八一”慰问94岁高龄老党员、志愿军战士庄燕劳的活动，聆听庄老讲述“我的初心故事”。安徽信息工程学院校党建办袁龙喜主任、阚海峰老师，计算机与软件工程学院党务主管张齐云老师参加了此次活动。?（图为学生与庄老的留影）（图为庄老讲故事）（图为全体师生为庄老献花留影）??? 在芜湖县六郎镇慢城颐养中心，庄老热情地欢迎来访人员，并分享抗美援朝的英雄故事和中国好人承诺如金的故事，给与会师生们上了一堂“坚守诺言铸大义”的党课。他那激昂澎湃的话语俨然不像是一位将近百岁的老人。在战火纷飞、硝烟弥漫的朝鲜战场上，只因战友牺牲前一个不起眼的嘱托，庄老便铭记在心，将其亲生儿子送到英烈父母身边，替战友完成赡养父母的心愿，这是多么令人心生敬畏啊！在他退休之后，更是积极发挥余热，成为社区爱国主义教育宣讲员，经常给社区的孩子们讲</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="modular notice">
+    <div class="titlediv">
+      <span class="title">通知公告</span>
+      <a class="more" href="http://cse.aiit.edu.cn:80/node/1596">更多</a>
+    </div>
+    <div class="notice-content">
+      <ul style="margin-top: 30px">
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/125609" title="【学术讲座】数据库与数学建模技术讲座">【学术讲座】数据库与数学建模技术讲座</a>
+            <span class="time">2018/10/18</span></div>
+        </li>
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/122123" title="关于举办第七届“中国软件杯”大学生软件设计大赛的通知">关于举办第七届“中国软件杯”大学生软件设计大赛的通知</a>
+            <span class="time">2018/03/14</span></div>
+        </li>
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/122122" title="【学术讲座】关于举办【互联网发展下的软件测试技术】讲座的通知 ">【学术讲座】关于举办【互联网发展下的软件测试技术】讲座的通知 </a>
+            <span class="time">2017/03/27</span></div>
+        </li>
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/122121" title="2017年安徽省普通高等学校品学兼优毕业生花名册">2017年安徽省普通高等学校品学兼优毕业生花名册</a>
+            <span class="time">2017/03/15</span></div>
+        </li>
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/122120" title="计算机与软件工程系2017届优秀毕业生名单">计算机与软件工程系2017届优秀毕业生名单</a>
+            <span class="time">2017/03/15</span></div>
+        </li>
+        <li>
+          <div style="width: 400px;line-height: 25px;background-color: #f8f8f8;"><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/122119" title="计算机与软件工程系关于开展2015-2016学年 “学风建设月”活动的通知">计算机与软件工程系关于开展2015-2016学年 “学风建设月”活动的通知</a>
+            <span class="time">2016/04/21</span></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="line-two" style="width: 100%">
+    <div class="double-work">
+      <div class="titlediv">
+        <span class="title">教学工作</span>
+        <a class="more" href="http://cse.aiit.edu.cn:80/node/1560">更多</a>
+      </div>
+      <div class="notice-content">
+        <ul style="margin-top: 20px">
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/129402"
+                 title="计算机学院（大数据学院）组建成立“学生讲师团”">计算机学院（大数据学院）组建成立“学生讲师团”</a><span
+            class="time">2019/04/26</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/129291"
+                 title="计算机学院和大数据学院成功举办创新创业类宣讲会">计算机学院和大数据学院成功举办创新创业类宣讲会</a><span
+            class="time">2019/04/23</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/129222"
+                 title="计算机学院和大数据学院2018-2019学年春季学期期中教学检查工作圆满完成">计算机学院和大数据学院2018-2019学年春季学期期中教学检查工作圆满完成</a><span
+            class="time">2019/04/18</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/128608"
+                 title="计算机学院和大数据学院顺利举行第三届青年教师教学竞赛暨智慧课堂教学创新大赛">计算机学院和大数据学院顺利举行第三届青年教师教学竞赛暨智慧课堂教学创新大赛</a><span
+            class="time">2019/03/21</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/128201"
+                 title="计算机与软件工程学院开展期末试卷专项检查">计算机与软件工程学院开展期末试卷专项检查</a><span
+            class="time">2019/03/03</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/128119"
+                 title="计算机学院与大数据学院顺利开展博思智慧教育学习平台使用培训工作">计算机学院与大数据学院顺利开展博思智慧教育学习平台使用培训工作</a><span
+            class="time">2019/02/22</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/128081"
+                 title="计算机学院与大数据学院深入课堂检查“教学第一课”">计算机学院与大数据学院深入课堂检查“教学第一课”</a><span
+            class="time">2019/02/20</span></li>
+          <li><a class="ell" style="width: 80%"
+                 href="http://cse.aiit.edu.cn:80/info/127668"
+                 title="计算机学院和大数据学院开展试卷质量标准与评阅装订规范学习工作">计算机学院和大数据学院开展试卷质量标准与评阅装订规范学习工作</a><span
+            class="time">2018/12/29</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="double-work" style="margin-right: 0">
+      <div class="titlediv">
+        <span class="title">科研工作</span>
+        <a class="more" href="http://cse.aiit.edu.cn:80/node/1595">更多</a>
+      </div>
+      <div class="notice-content">
+        <ul style="margin-top: 20px">
+          <li><a class="ell" style="width: 80%" href="http://cse.aiit.edu.cn:80/info/125614"
+                 title="历年科研成果（纵向科研课题）信息统计">历年科研成果（纵向科研课题）信息统计</a><span
+            class="time">2018/10/18</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modular third-work student-work">
+    <div class="titlediv">
+      <span class="title">学生工作</span>
+      <a class="more" href="http://cse.aiit.edu.cn:80/node/1585">更多</a>
+    </div>
+    <div class="notice-content">
+      <ul style="margin-top: 20px">
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/130040" title="计算机学院开展“传承百年五四精神 争做新时代新青年”系列主题班会活动">计算机学院开展“传承百年五四精神 争做新时代新青年”系列主题班会活动</a><span
+          class="time">2019/05/24</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129995" title="计算机学院和大数据学院顺利举办诚信画展主题活动">计算机学院和大数据学院顺利举办诚信画展主题活动</a><span
+          class="time">2019/05/23</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129992" title="诚信教育，立德立行——计算机学院和大数据学院召开诚信教育主题月动员大会">诚信教育，立德立行——计算机学院和大数据学院召开诚信教育主题月动员大会</a><span
+          class="time">2019/05/23</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129885" title="三行情书 爱要用心写出来">三行情书 爱要用心写出来</a><span
+          class="time">2019/05/17</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129862" title="计算机协会顺利举办第一届计算机打字比赛">计算机协会顺利举办第一届计算机打字比赛</a><span
+          class="time">2019/05/16</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129791" title="续读名家诗词，铭记中华精髓：计算机学院和大数据学院举办诗词大会学院选拔赛">续读名家诗词，铭记中华精髓：计算机学院和大数据学院举办诗词大会学院选拔赛</a><span
+          class="time">2019/05/15</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129789" title="挑战自我，增进互信：计科18级专业部分同学赴新芜参加素质拓展训练">挑战自我，增进互信：计科18级专业部分同学赴新芜参加素质拓展训练</a><span
+          class="time">2019/05/15</span></li>
+        <li><a class="ell" style="width: 75%" href="http://cse.aiit.edu.cn:80/info/129682" title="计算机学院和大数据学院举办“传承经典，绽放未来”成语接龙选拔赛">计算机学院和大数据学院举办“传承经典，绽放未来”成语接龙选拔赛</a><span
+          class="time">2019/05/09</span></li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="modular third-work party-work">
+    <div class="titlediv">
+      <span class="title">党建工作</span>
+      <a class="more" href="http://cse.aiit.edu.cn:80/node/1592">更多</a>
+    </div>
+    <div class="notice-content">
+      <ul style="margin-top: 20px">
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/130997"
+               title="计算机与软件工程学院学生党支部顺利召开党员发展大会">计算机与软件工程学院学生党支部顺利召开党员发展大会</a><span
+          class="time">2019/07/13</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/129674"
+               title="计算机与软件工程学院开展第14期党课培训动员大会">计算机与软件工程学院开展第14期党课培训动员大会</a><span
+          class="time">2019/05/09</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/129539"
+               title="今天，他们在党史馆的长廊里，重温100年前的岁月历史">今天，他们在党史馆的长廊里，重温100年前的岁月历史</a><span
+          class="time">2019/04/30</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/129531"
+               title="计算机与软件工程学院顺利召开党员发展大会">计算机与软件工程学院顺利召开党员发展大会</a><span
+          class="time">2019/04/29</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/128967"
+               title="计算机与软件工程学院学生党务中心成立大会暨表彰大会">计算机与软件工程学院学生党务中心成立大会暨表彰大会</a><span
+          class="time">2019/04/04</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/128942"
+               title="我校党委办公室主任袁龙喜一行赴安徽工程大学考察交流学习创建样板党支部工作">我校党委办公室主任袁龙喜一行赴安徽工程大学考察交流学习创建样板党支部工作</a><span
+          class="time">2019/04/03</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/128838"
+               title="计算机与软件工程学院学生党支部成功举办党务标识大赛决赛">计算机与软件工程学院学生党支部成功举办党务标识大赛决赛</a><span
+          class="time">2019/03/29</span></li>
+        <li><a class="ell" style="width: 75%"
+               href="http://cse.aiit.edu.cn:80/info/128645"
+               title="?计算机与软件工程学院学生党支部开展“慰问困难党员，关爱困难学生”座谈会">?计算机与软件工程学院学生党支部开展“慰问困难党员，关爱困难学生”座谈会</a><span
+          class="time">2019/03/22</span></li>
+      </ul>
+
+    </div>
+  </div>
+  <div class="modular third-work links">
+    <div class="online-notice"><a href="http://cse.aiit.edu.cn:80/guestbook.do" target="_blank">在线留言</a></div>
+    <!-- 热点链接-->
+    <div class="linkstop">热点链接</div>
+    <ul>
+      <li class="ell"><a href="http://www.aiit.edu.cn/" target="_blank">安徽信息工程学院官方网站</a></li>
+      <li class="ell"><a href="http://teach.aiit.edu.cn/xtgl/" target="_blank">教务处管理系统</a></li>
+      <li class="ell"><a href="http://www.aiit.edu.cn/3dmap2/" target="_blank">学院三维全景地图</a></li>
+      <li class="ell"><a href="http://cse.aiit.edu.cn/cmscp/index.do?_site=45" target="_blank">网站后台管理</a></li>
+      <li class="ell"><a href="http://old.aiit.edu.cn" target="_blank">访问旧网站</a></li>
+    </ul>
+  </div>
+  <div class="footer">
+    <p class="copyright">?版权所有 &nbsp;安徽信息工程学院 &nbsp;皖ICP备<!--备案号-->12020830号<!--备案号--></p>
+  </div>
+  <script type="text/javascript">
+      window.onload = function () {
+          var mySwiper = new Swiper('.swiper-container', {
+              loop: true,
+              autoplay: 3000,
+              autoplayDisableOnInteraction: false,
+              pagination: '.pagination',
+              paginationClickable: true
+              //其他设置
+          });
+          var mySwiper2 = new Swiper('.pic-new-content', {
+              paginationClickable: true,
+              slidesPerView: 1
+              //其他设置
+          });
+          $('.prev').on('click', function (e) {
+              e.preventDefault();
+              mySwiper2.swipePrev();
+          });
+
+          $('.next').on('click', function (e) {
+              e.preventDefault();
+              mySwiper2.swipeNext();
+          });
+          $('.pic-new-content').find('.swiper-wrapper').css('height', '190px').find('.swiper-slide').css('height', '190px');
+      }
+  </script>
+</body>
+</html>
